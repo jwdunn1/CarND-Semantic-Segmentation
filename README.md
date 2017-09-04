@@ -7,19 +7,19 @@ In this project, a fully convolutional network (FCN) is trained to identify road
 #### Load
 
 The pretrained VGG model is loaded by the function `load_vgg` defined at
-[line 26](./blob/master/main.py#L26).
+[line 26](./main.py#L26).
 
 #### Features
 
-The function `layers` at [line 50](./blob/master/main.py#L50) defines the FCN connections.
+The function `layers` at [line 50](./main.py#L50) defines the FCN connections.
 
 #### Optimization
 
-The function `optimize` at [line 89](./blob/master/main.py#L89) reshapes the output and defines the loss function and optimizer.
+The function `optimize` at [line 89](./main.py#L89) reshapes the output and defines the loss function and optimizer.
 
 #### Training
 
-The function `train_nn` at [line 110](./blob/master/main.py#L110) trains the neural network and prints the loss value of the network during the process.
+The function `train_nn` at [line 110](./main.py#L110) trains the neural network and prints the loss value of the network during the process.
 <pre>
 TensorFlow Version: 1.1.0
 Default GPU Device: /gpu:0
