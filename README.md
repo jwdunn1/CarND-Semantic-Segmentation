@@ -19,7 +19,7 @@ The function `optimize` at [line 89](https://github.com/jwdunn1/CarND-Semantic-S
 
 #### Training
 
-The function `train_nn` trains the neural network and prints the loss value of the network during the process.
+The function `train_nn` at [line 110](https://github.com/jwdunn1/CarND-Semantic-Segmentation/blob/82aa42bae807583118f4811af461320a34ce3d70/main.py#L110) trains the neural network and prints the loss value of the network during the process.
 <pre>
 TensorFlow Version: 1.1.0
 Default GPU Device: /gpu:0
