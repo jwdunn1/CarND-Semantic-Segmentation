@@ -7,19 +7,19 @@ In this project, a fully convolutional network (FCN) is trained to identify road
 #### Load
 
 The pretrained VGG model is loaded by the function `load_vgg` defined at
-[line 26](https://github.com/jwdunn1/CarND-Semantic-Segmentation/blob/82aa42bae807583118f4811af461320a34ce3d70/main.py#L26).
+[line 26](./blob/master/main.py#L26).
 
 #### Features
 
-The function `layers` at [line 50](https://github.com/jwdunn1/CarND-Semantic-Segmentation/blob/82aa42bae807583118f4811af461320a34ce3d70/main.py#L50) defines the FCN connections.
+The function `layers` at [line 50](./blob/master/main.py#L50) defines the FCN connections.
 
 #### Optimization
 
-The function `optimize` at [line 89](https://github.com/jwdunn1/CarND-Semantic-Segmentation/blob/82aa42bae807583118f4811af461320a34ce3d70/main.py#L89) reshapes the output and defines the loss function and optimizer.
+The function `optimize` at [line 89](./blob/master/main.py#L89) reshapes the output and defines the loss function and optimizer.
 
 #### Training
 
-The function `train_nn` at [line 110](https://github.com/jwdunn1/CarND-Semantic-Segmentation/blob/82aa42bae807583118f4811af461320a34ce3d70/main.py#L110) trains the neural network and prints the loss value of the network during the process.
+The function `train_nn` at [line 110](./blob/master/main.py#L110) trains the neural network and prints the loss value of the network during the process.
 <pre>
 TensorFlow Version: 1.1.0
 Default GPU Device: /gpu:0
@@ -44,6 +44,7 @@ Epoch  29  Batch  276  Loss  0.0105523
 #### Loss
 
 On average, the model decreases loss over time. In the graph below, the loss value for each training cycle is shown as a data point in light green. The white line indicates a running average over a period of 80 cycles.
+
 ![loss](./images/losstrend.png "loss")
 
 #### Hyperparameters
@@ -106,12 +107,14 @@ Initially, the pixels were dithering at the edges of the road. Further adjustmen
 Examples of improvement from the first run to the final are shown below. An image is sampled from each of the three training categories: marked, marked multiple lane, and unmarked roads.
 
 First run...Epochs:6, Batch size:2, Dropout: 50%, Regularization: None
+
 ![a0](./images/um_000019-0.png "a0")
 ![b0](./images/umm_000035-0.png "b0")
 ![c0](./images/uu_000056-0.png "c0")
 
 ---
 Last run...Epochs:30, Batch size:1, Dropout: 35%, Regularization: L2 1e-3
+
 ![a0](./images/um_000019-7.png "a0")
 ![b0](./images/umm_000035-7.png "b0")
 ![c0](./images/uu_000056-7.png "c0")
